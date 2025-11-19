@@ -1,0 +1,21 @@
+site_name: Giovanni Polette | Cloud Engineer
+site_url: https://gpdlportfolio.shop
+site_author: Giovanni Polette Dalla Libera
+repo_name: gpdl-portfolio
+repo_url: https://github.com/SEU-USUARIO/gpdl-portfolio
+
+theme:
+  name: material
+  palette:
+    - scheme: slate # Começando direto com Dark Mode
+      primary: black
+      accent: deep orange
+  features:
+    - navigation.tabs
+    - content.code.copy
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - admonition
