@@ -1,0 +1,19 @@
+# .gitignore
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+
+# Terraform (Para o futuro)
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+# MkDocs Build Artifacts
+site/
