@@ -1,21 +1,70 @@
 site_name: Giovanni Polette | Cloud Engineer
 site_url: https://gpdlportfolio.shop
 site_author: Giovanni Polette Dalla Libera
-repo_name: gpdl-portfolio
-repo_url: https://github.com/SEU-USUARIO/gpdl-portfolio
+site_description: Portfolio de Engenharia Cloud, DevOps e Projetos Técnicos.
 
+# Repository information (Shows GitHub icon at top right)
+repo_name: gpdl-portfolio-cicd
+repo_url: https://github.com/gpdl-0/gpdl-portfolio-cicd
+
+# Theme Configuration (Material for MkDocs)
 theme:
   name: material
+  language: pt-BR
+  # Logo and Favicon (Optional: You can add these files later)
+  # logo: assets/logo.png
+  # favicon: assets/favicon.png
+  
   palette:
-    - scheme: slate # Começando direto com Dark Mode
+    # Dark Mode (Default)
+    - scheme: slate
       primary: black
       accent: deep orange
-  features:
-    - navigation.tabs
-    - content.code.copy
+      toggle:
+        icon: material/weather-night
+        name: Alternar para modo claro
+    # Light Mode
+    - scheme: default
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Alternar para modo escuro
 
+  features:
+    - navigation.tabs        # Top menu tabs
+    - navigation.sections    # Expandable sections
+    - navigation.top         # "Back to top" button
+    - content.code.copy      # Copy button for code blocks
+    - content.action.edit    # Button to suggest edits (optional)
+
+# Social Links (Footer)
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/giovanni-pdl/
+      name: LinkedIn
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/@giovanni-pdl
+      name: Medium
+    - icon: fontawesome/brands/github
+      link: https://github.com/gpdl-0
+      name: GitHub
+
+# Markdown Extensions
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
-  - pymdownx.superfences
-  - admonition
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:   # Required for Mermaid diagrams
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition              # Alert boxes (Info, Warning, etc.)
+  - pymdownx.details        # Collapsible details
+  - attr_list               # Allows CSS classes in Markdown
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
