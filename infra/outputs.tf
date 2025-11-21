@@ -12,3 +12,8 @@ output "distribution_id" {
   description = "The ID of the CloudFront distribution for cache invalidation."
   value       = aws_cloudfront_distribution.s3_distribution.id
 }
+# Required for GitHub Actions OIDC configuration
+output "github_oidc_role_arn" {
+  description = "The ARN of the IAM Role to be assumed by GitHub Actions via OIDC."
+  value       = aws_iam_role.github_actions.arn
+}
