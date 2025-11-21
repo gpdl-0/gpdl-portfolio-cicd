@@ -1,66 +1,57 @@
-# Olá, eu sou o Giovanni
+# Welcome to my portfolio
 
-Bem-vindo ao meu portfólio de engenharia. Sou um **Cloud Support Engineer** focado em arquitetura Cloud, DevOps e Automação.
+ **Transforming business requirements into resilient, scalable, and automated infrastructure.**
 
-!!! warning "🚧 Site em Construção Ativa (CI/CD Live)"
-    Este portfólio é um **Laboratório Vivo**. Você está visualizando uma versão implantada automaticamente via pipeline de CI/CD.
+!!! info "Wait, this is not just a website."
+     **This portfolio is a Serverless Engineering Project.**
 
-    O conteúdo e a estrutura estão sendo refinados diariamente. Acompanhe as mudanças no [Repositório GitHub](https://github.com/gpdl-0/gpdl-portfolio-cicd).
+     Unlike traditional static sites, this environment is deployed via a fully automated CI/CD pipeline on AWS using Infrastructure as Code (IaC).
+     
+[:material-arrow-right: Click here to see how I engineered this platform](projects/serverless-portfolio.md)
 
----
+## 📍 Live Architecture
 
-## 🚀 Projetos em Destaque
+ Welcome to my technical sandbox. The diagram below illustrates the **Serverless Infrastructure** delivering this content to you right now:
 
-### 1. HumanGov: Arquitetura SaaS Multi-Tenant na AWS
-
-**Stack:** AWS, Terraform, Kubernetes, DevOps
-
-Recentemente documentei a implementação de uma infraestrutura complexa para um SaaS governamental. O projeto foca em isolamento de *tenants*, escalabilidade e provisionamento automatizado.
-
-> *"O HumanGov é uma solução SaaS projetada para modernizar a gestão de recursos humanos no setor público..."*
-
-[Ler Artigo Completo no Medium :material-arrow-right:](https://medium.com/@giovanni-pdl/projeto-humangov-documenta%C3%A7%C3%A3o-t%C3%A9cnica-f0878caa11af){ .md-button .md-button--primary }
-
----
-
-### 2. Este Portfólio (Meta-Projeto)
-
-**Stack:** AWS S3, CloudFront, OIDC, GitHub Actions
-
-Este próprio site que você está navegando é uma demonstração de engenharia **Serverless** e **FinOps**. Não há servidores ligados. Todo o provisionamento é feito via código (IaC).
-
-**Arquitetura Atual:**
-
-```mermaid
+``` mermaid
 graph LR
-    User((Visitante)) -->|HTTPS| CDN[CloudFront Edge]
-    CDN -->|OAC Auth| S3[S3 Bucket Privado]
+    User((You)) -->|HTTPS| CDN[CloudFront Edge]
+    CDN -->|OAC Auth| S3[S3 Private Bucket]
     GitHub[GitHub Actions] -->|OIDC AssumeRole| AWS[AWS Account]
     GitHub -->|Sync HTML| S3
     GitHub -->|Invalidate Cache| CDN
-    
-    style CDN fill:#ff9900,stroke:#333,stroke-width:2px
-    style S3 fill:#ff9900,stroke:#333,stroke-width:2px
-    style GitHub fill:#24292e,stroke:#fff,color:#fff
-´´´
-*Custo: Próximo de zero (Arquitetura Estática).
+```
 
-*Segurança: Autenticação OIDC (Sem chaves de acesso fixas) e Bucket Privado.
+* **Cost:** < $0.10/month (FinOps optimized).
+* **Security:** OIDC Authentication (Keyless) and Private Storage.
+* **Automation:** Continuous Deployment on every push to `main`.
 
-*Automação: Deploy automático a cada push na branch main.
+ ---
 
-## Contato e Redes
-Estou sempre aberto a discutir desafios de Cloud e oportunidades.
+## 📂 Project Catalog
 
-<div class="grid cards" markdown>
+ Select a case study to view implementation details, challenges, and architecture.
 
-:fontawesome-brands-linkedin: LinkedIn
-Conecte-se comigo profissionalmente :material-arrow-right: Acessar Perfil
 
-:fontawesome-brands-medium: Medium
-Leia meus artigos técnicos e documentações :material-arrow-right: Ler Artigos
 
-:fontawesome-brands-github: GitHub
-Explore meu código fonte e infraestrutura :material-arrow-right: Ver Repositórios
+* **Multi-Tenant SaaS Architecture (HumanGov)**
+     ---
 
-</div>
+     A complete *Software as a Service* solution deployed on AWS using Kubernetes (EKS) and Terraform. Focus on tenant isolation and scalability.
+
+     [:material-arrow-right: View Technical Documentation](projects/humangov-saas.md)
+
+* **Serverless Portfolio Engineering**
+     ---
+
+     The "Meta-Project". How I built this site with zero fixed costs, high performance, and security using OIDC, CloudFront and SSL.
+
+     [:material-arrow-right: View Technical Documentation](projects/portfolio-serverless.md)
+
+ ---
+
+## 🤝 Let's Build Together?
+
+ I am available for **Cloud Engineer** or **DevOps** opportunities.
+
+ [LinkedIn :fontawesome-brands-linkedin:](https://www.linkedin.com/in/giovanni-pdl/){ .md-button } [GitHub :fontawesome-brands-github:](https://github.com/gpdl-0){ .md-button }
