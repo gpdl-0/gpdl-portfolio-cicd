@@ -28,6 +28,9 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   # Change to "PriceClass_All" if you need lowest latency globally.
   price_class = "PriceClass_100" 
 
+  # NEW: Tell CloudFront to accept traffic for these domains
+  aliases = [var.domain_name, "www.${var.domain_name}"]
+
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD"]
     cached_methods   = ["GET", "HEAD"]
@@ -52,10 +55,17 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
       restriction_type = "none"
     }
   }
-
+  /*
   # For now, we use the default CloudFront SSL cert (*.cloudfront.net)
   # We will change this in Sprint 4 to use the custom domain certificate (ACM)
   viewer_certificate {
     cloudfront_default_certificate = true
+  }
+  */
+  # UPDATED: Use the custom ACM Certificate instead of the default one
+  viewer_certificate {
+    acm_certificate_arn      = aws_acm_certificate.cert.arn
+    ssl_support_method       = "sni-only"
+    minimum_protocol_version = "TLSv1.2_2021"
   }
 }

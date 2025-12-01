@@ -33,4 +33,4 @@
 * **Hosting:** ~$0.01 (S3 Storage)
 * **Compute:** $0.00 (Static Site)
 * **CDN:** Free Tier (1TB/month)
-* **Total Estimated:** < $0.10 / month
+* **Total Estimated:** ~ $0.01 / month

@@ -6,7 +6,7 @@ site_description: Cloud Engineering, DevOps, and Infrastructure Automation Portf
 # Repository information (Shows GitHub icon at top right)
 repo_name: gpdl-portfolio-cicd
 repo_url: https://github.com/gpdl-0/gpdl-portfolio-cicd
-use_directory_urls: false
+use_directory_urls: false # disable directory urls to prevent s3 oac access denied
 
 # Theme Configuration (Material for MkDocs)
 theme:

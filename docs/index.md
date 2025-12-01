@@ -46,7 +46,7 @@ graph LR
 
      The "Meta-Project". How I built this site with zero fixed costs, high performance, and security using OIDC, CloudFront and SSL.
 
-     [:material-arrow-right: View Technical Documentation](projects/portfolio-serverless.md)
+     [:material-arrow-right: View Technical Documentation](projects/serverless-portfolio.md)
 
  ---
 
