@@ -1,21 +1,71 @@
-site_name: Giovanni Polette | Cloud Engineer
+site_name: Giovanni Polette | Professional Portfolio
 site_url: https://gpdlportfolio.shop
 site_author: Giovanni Polette Dalla Libera
-repo_name: gpdl-portfolio
-repo_url: https://github.com/SEU-USUARIO/gpdl-portfolio
+site_description: This is Giovanni's portfolio. Here you will find samples of his work in areas such as Cloud, Automation, and Infrastructure.
 
+# Repository information (Shows GitHub icon at top right)
+repo_name: gpdl-portfolio-cicd
+repo_url: https://github.com/gpdl-0/gpdl-portfolio-cicd
+use_directory_urls: false # disable directory urls to prevent s3 oac access denied
+
+# Theme Configuration (Material for MkDocs)
 theme:
   name: material
+  favicon: assets/favicon.svg
+  logo: assets/logo.svg
+  language: en
   palette:
-    - scheme: slate # Começando direto com Dark Mode
+    - scheme: slate 
       primary: black
-      accent: deep orange
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to Dark Mode
+    - scheme: default
+      primary: black
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to Light Mode
+
   features:
     - navigation.tabs
+    - navigation.sections
+    - navigation.top
     - content.code.copy
+    - toc.integrate
+
+nav:
+  - Home: index.md
+  - Projects:
+    - 'Multi-Tenant SaaS (HumanGov)': projects/humangov-saas.md
+    - 'Serverless Portfolio (This Site)': projects/serverless-portfolio.md
 
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
-  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - admonition
+  - pymdownx.details
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/giovanni-pdl/
+      name: LinkedIn
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/@giovanni-pdl
+      name: Medium
+    - icon: fontawesome/brands/github
+      link: https://github.com/gpdl-0
+      name: GitHub

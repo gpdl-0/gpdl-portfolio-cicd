@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
+  <defs>
+    <style>
+      .text { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 24px; fill: #eceff1; }
+      .icon-bg { fill: #009688; } /* Teal */
+      .icon-stroke { stroke: #fff; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <!-- Icon Part (Left) -->
+  <circle cx="25" cy="25" r="20" class="icon-bg" />
+  <!-- Cloud outline inside circle -->
+  <path d="M18 25a5 5 0 0 1 5-5 5 5 0 0 1 5 5h1a4 4 0 0 1 0 8h-11a4 4 0 0 1 0-8h0" class="icon-stroke" transform="translate(4, -2)" />
+  
+  <!-- Text Part (Right) -->
+  <text x="55" y="33" class="text">GPDL</text>
+</svg>
