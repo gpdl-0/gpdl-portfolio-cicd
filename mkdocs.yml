@@ -1,7 +1,7 @@
-site_name: GPDL | Cloud Professional Portfolio
+site_name: Giovanni Polette | Professional Portfolio
 site_url: https://gpdlportfolio.shop
 site_author: Giovanni Polette Dalla Libera
-site_description: Cloud Engineering, DevOps, and Infrastructure Automation Portfolio.
+site_description: This is Giovanni's portfolio. Here you will find samples of his work in areas such as Cloud, Automation, and Infrastructure.
 
 # Repository information (Shows GitHub icon at top right)
 repo_name: gpdl-portfolio-cicd
@@ -11,6 +11,8 @@ use_directory_urls: false # disable directory urls to prevent s3 oac access deni
 # Theme Configuration (Material for MkDocs)
 theme:
   name: material
+  favicon: assets/favicon.svg
+  logo: assets/logo.svg
   language: en
   palette:
     - scheme: slate 
@@ -67,21 +69,3 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/gpdl-0
       name: GitHub
-
-# Markdown Extensions
-markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences:   # Required for Mermaid diagrams
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - admonition              # Alert boxes (Info, Warning, etc.)
-  - pymdownx.details        # Collapsible details
-  - attr_list               # Allows CSS classes in Markdown
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg

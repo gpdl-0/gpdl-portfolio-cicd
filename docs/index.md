@@ -1,6 +1,6 @@
-# Welcome to my portfolio
+# Giovanni Polette's Portfolio
 
- **Transforming business requirements into resilient, scalable, and automated infrastructure.**
+ **Bringing ideas to life through technology experimentation. Focused on simple, yet powerful implementations that drive real-world professional utility.**
 
 !!! info "Wait, this is not just a website."
      **This portfolio is a Serverless Engineering Project.**
@@ -13,16 +13,9 @@
 
  Welcome to my technical sandbox. The diagram below illustrates the **Serverless Infrastructure** delivering this content to you right now:
 
-``` mermaid
-graph LR
-    User((You)) -->|HTTPS| CDN[CloudFront Edge]
-    CDN -->|OAC Auth| S3[S3 Private Bucket]
-    GitHub[GitHub Actions] -->|OIDC AssumeRole| AWS[AWS Account]
-    GitHub -->|Sync HTML| S3
-    GitHub -->|Invalidate Cache| CDN
-```
+![Architecture Diagram](assets/diagram1.png)
 
-* **Cost:** < $0.10/month (FinOps optimized).
+* **Cost:** < $0.01/month (Cost optimized).
 * **Security:** OIDC Authentication (Keyless) and Private Storage.
 * **Automation:** Continuous Deployment on every push to `main`.
 
@@ -52,6 +45,6 @@ graph LR
 
 ## 🤝 Let's Build Together?
 
- I am available for **Cloud Engineer** or **DevOps** opportunities.
+ I am available for opportunities. Fell free to reach me out or collab:
 
  [LinkedIn :fontawesome-brands-linkedin:](https://www.linkedin.com/in/giovanni-pdl/){ .md-button } [GitHub :fontawesome-brands-github:](https://github.com/gpdl-0){ .md-button }
